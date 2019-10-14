@@ -22,8 +22,7 @@ class Song
   end
   
   def self.find_by_name(name)
-    selected_song = @@all.select{|title| title.name == name}
-    selected_song
+    @@all.select{|title| title.name == name}
   end
 
   def self.all
