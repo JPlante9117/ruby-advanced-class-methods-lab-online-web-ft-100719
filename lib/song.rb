@@ -39,12 +39,14 @@ class Song
     @@all.sort_by{ |a, b| a.name <=> b.name }
   end
 
-  def self.all
+  def self.all                #class method
     @@all
   end
 
-  def save
+  def save                    #instance method
     self.class.all << self
   end
 
 end
+
+
