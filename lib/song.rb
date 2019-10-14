@@ -20,6 +20,10 @@ class Song
     @@all << song
     song
   end
+  
+  def self.find_by_name(name)
+    @@all.collect{|title| title.name == name}
+  end
 
   def self.all
     @@all
