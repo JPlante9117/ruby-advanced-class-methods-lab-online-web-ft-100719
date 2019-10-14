@@ -41,7 +41,9 @@ class Song
   end
   
   def  self.new_from_filename(filename)
-    filename.gsub(".mp3", "").split(" - ")
+    info_from_file = filename.gsub(".mp3", "").split(" - ")
+    song = self.find_or_create_by_name(info_from_file[1])
+    song.artist_name = info_from_file[0]
   end
 
   def self.all                #class method
