@@ -54,6 +54,10 @@ class Song
     song = self.find_or_create_by_name(info_from_file[1])
     song.artist_name = info_from_file[0]
   end
+  
+  def self.destroy_all
+    @@all = []
+  end
 
   def self.all                #class method
     @@all
