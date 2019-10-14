@@ -39,6 +39,10 @@ class Song
     #@@all.sort { |song1, song2| song1.name <=> song2.name }
     @@all.sort_by { |song| song.name }
   end
+  
+  def  self.new_from_filename
+    
+  end
 
   def self.all                #class method
     @@all
