@@ -41,7 +41,7 @@ class Song
   end
   
   def  self.new_from_filename(filename)
-    filename.gsub().split("-")
+    filename.gsub(".mp3", "").split(" - ")
   end
 
   def self.all                #class method
