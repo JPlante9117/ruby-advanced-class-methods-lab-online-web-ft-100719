@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
   attr_accessor :name, :artist_name
   
@@ -44,6 +46,7 @@ class Song
     info_from_file = filename.gsub(".mp3", "").split(" - ")
     song = self.find_or_create_by_name(info_from_file[1])
     song.artist_name = info_from_file[0]
+    song
   end
 
   def self.all                #class method
