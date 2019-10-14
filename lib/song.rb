@@ -25,7 +25,7 @@ class Song
     @@all.select{|title| title.name == name}[0]
   end
   
-  def find_or_create_by_name(name)
+  def self.find_or_create_by_name(name)
     if self.find_by_name(name) == false 
       self.create_by_name(name)
     else
