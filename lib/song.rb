@@ -49,4 +49,6 @@ class Song
 
 end
 
-somesong.save
+# self is a context word
+  # attached to an instance method, it is an instance
+  # attached to a class method, it is a class
